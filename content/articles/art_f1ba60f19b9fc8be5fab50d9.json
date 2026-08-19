@@ -1,0 +1,75 @@
+{
+  "id": "art_f1ba60f19b9fc8be5fab50d9",
+  "slug": "wagga-wagga-chiko-roll-debut",
+  "category": "Culture",
+  "title": "One show, one snack, three towns: Wagga Wagga’s Chiko Roll moment",
+  "summary": "A one-minute history of the Chiko Roll’s documented 1951 Wagga Wagga debut—and why that does not settle where it was invented.",
+  "date": "22 July 2026",
+  "author": "Al Zadid Yusuf",
+  "tags": [
+    "Culture"
+  ],
+  "accent": "sky",
+  "art": "shelf",
+  "artLabel": "CULTURE",
+  "sections": [
+    {
+      "id": "introduction",
+      "title": "Introduction",
+      "paragraphs": [
+        "Wagga Wagga did not simply “invent” the Chiko Roll. Its more defensible claim is just as interesting: the city hosted the snack’s documented public breakthrough."
+      ]
+    },
+    {
+      "id": "the-story-in-three-bites",
+      "title": "The story in three bites",
+      "paragraphs": [],
+      "list": [
+        {
+          "label": "Developed in Victoria.",
+          "text": "Bendigo boilermaker and caterer Frank McEncroe developed a sturdier, one-handed alternative to a chop-suey roll he had seen outside a Richmond football ground."
+        },
+        {
+          "label": "Launched in Wagga.",
+          "text": "The new roll appeared at the 1951 Wagga Wagga Agricultural Show. The Australian Dictionary of Biography says it was acclaimed there; Wagga Wagga City Council describes the event as its first commercial sale."
+        },
+        {
+          "label": "Claimed by several places.",
+          "text": "Wagga, Bendigo and Bathurst later argued over the snack’s home. The council itself calls Wagga’s “birthplace” claim controversial and records the manufacturer’s position that the origins are varied and complex."
+        }
+      ],
+      "listStyle": "ordered"
+    },
+    {
+      "id": "what-wagga-can-confidently-claim",
+      "title": "What Wagga can confidently claim",
+      "paragraphs": [
+        "Wagga was the launch stage, not the whole origin story. For the Chiko Roll’s fiftieth anniversary, its manufacturer presented gold-plated rolls to both Wagga and Bendigo—a fittingly shared memorial to a famously disputed snack."
+      ]
+    },
+    {
+      "id": "sources-and-further-reading",
+      "title": "Sources and further reading",
+      "paragraphs": [],
+      "references": [
+        {
+          "label": "Wagga Wagga City Council — Our History",
+          "url": "https://wagga.nsw.gov.au/community/about-wagga-wagga/our-history"
+        },
+        {
+          "label": "Australian Dictionary of Biography — Francis Gerald McEncroe",
+          "url": "https://adb.anu.edu.au/biography/mcencroe-francis-gerald-frank-10946"
+        },
+        {
+          "label": "Chiko — Our Story",
+          "url": "https://chiko.com.au/"
+        },
+        {
+          "label": "Museum of the Riverina — Made in Wagga retrospective",
+          "url": "https://news.wagga.nsw.gov.au/news-articles/2020/december-2020/taking-a-step-back-in-time-with-made-in-wagga-retrospective"
+        }
+      ]
+    }
+  ],
+  "related": []
+}

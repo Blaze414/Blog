@@ -1,0 +1,29 @@
+# Cache content-hashed application assets immutably.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Serve article attachments inline with explicit, sniff-resistant MIME types.
+/documents/*.docx
+  Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+  Content-Disposition: inline
+  X-Content-Type-Options: nosniff
+
+/documents/*.pptx
+  Content-Type: application/vnd.openxmlformats-officedocument.presentationml.presentation
+  Content-Disposition: inline
+  X-Content-Type-Options: nosniff
+
+/documents/*.xlsx
+  Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  Content-Disposition: inline
+  X-Content-Type-Options: nosniff
+
+/documents/*.csv
+  Content-Type: text/csv; charset=utf-8
+  Content-Disposition: inline
+  X-Content-Type-Options: nosniff
+
+/documents/*.pdf
+  Content-Type: application/pdf
+  Content-Disposition: inline
+  X-Content-Type-Options: nosniff

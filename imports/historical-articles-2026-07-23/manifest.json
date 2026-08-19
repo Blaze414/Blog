@@ -1,0 +1,227 @@
+{
+  "schemaVersion": 1,
+  "collection": "historical-articles-2026-07-23",
+  "exportedAt": "2026-07-23T03:59:35.751Z",
+  "articleCount": 3,
+  "assetCount": 2,
+  "articles": [
+    {
+      "id": "article:devils-river-murder-1863",
+      "slug": "devils-river-murder-1863",
+      "title": "One gunshot, three executions: the Devil’s River murder of 1863",
+      "category": "Culture",
+      "date": "July 22, 2026",
+      "readTime": "4 min read",
+      "importPath": "import-ready/devils-river-murder-1863",
+      "snapshotRecord": "fieldnote-snapshot/content/articles/devils-river-murder-1863/article.json",
+      "assetIds": [
+        "asset:devils-river-murder-1863:melbourne-gaol-mccubbin-1884",
+        "asset:devils-river-murder-1863:old-melbourne-gaol-aerial-1922"
+      ]
+    },
+    {
+      "id": "article:melbourne-eight-hour-day-three-steps",
+      "slug": "melbourne-eight-hour-day-three-steps",
+      "title": "Three steps to eight hours: Melbourne’s 1856 campaign",
+      "category": "Work",
+      "date": "July 22, 2026",
+      "readTime": "1 min read",
+      "importPath": "import-ready/melbourne-eight-hour-day-three-steps",
+      "snapshotRecord": "fieldnote-snapshot/content/articles/melbourne-eight-hour-day-three-steps/article.json",
+      "assetIds": []
+    },
+    {
+      "id": "article:wagga-wagga-chiko-roll-debut",
+      "slug": "wagga-wagga-chiko-roll-debut",
+      "title": "One show, one snack, three towns: Wagga Wagga’s Chiko Roll moment",
+      "category": "Culture",
+      "date": "July 22, 2026",
+      "readTime": "1 min read",
+      "importPath": "import-ready/wagga-wagga-chiko-roll-debut",
+      "snapshotRecord": "fieldnote-snapshot/content/articles/wagga-wagga-chiko-roll-debut/article.json",
+      "assetIds": []
+    }
+  ],
+  "payloadFiles": [
+    {
+      "path": "fieldnote-snapshot/content/articles/devils-river-murder-1863/article.json",
+      "bytes": 11065,
+      "sha256": "16b3b48e2d61f1cbbfe7c310f9ab3709895852055faf1e023ccce200edbc3397"
+    },
+    {
+      "path": "fieldnote-snapshot/content/articles/devils-river-murder-1863/source-export/devils-river-murder-1863.md",
+      "bytes": 5980,
+      "sha256": "20e09f12749cfe785a1fcc2ff8a0a04c0ef5994fff95ce1b722f7bd01bd22464"
+    },
+    {
+      "path": "fieldnote-snapshot/content/articles/devils-river-murder-1863/source-export/images/melbourne-gaol-mccubbin-1884.jpg",
+      "bytes": 5691044,
+      "sha256": "5b01ac528dc2f8df48588b814c4634533ccab21521147ab08a62f685b956ad68"
+    },
+    {
+      "path": "fieldnote-snapshot/content/articles/devils-river-murder-1863/source-export/images/old-melbourne-gaol-aerial-1922.jpg",
+      "bytes": 1907975,
+      "sha256": "97801212d618dc69fcad105ca5cc41863988ee4dce2befc349af42d76d59d862"
+    },
+    {
+      "path": "fieldnote-snapshot/content/articles/melbourne-eight-hour-day-three-steps/article.json",
+      "bytes": 3078,
+      "sha256": "5c339f88f4aa8c06506ebaee8e81849f7c51158db74efa72c1167e7872d019bd"
+    },
+    {
+      "path": "fieldnote-snapshot/content/articles/melbourne-eight-hour-day-three-steps/source-export/melbourne-eight-hour-day-three-steps.md",
+      "bytes": 1875,
+      "sha256": "8ac51892af086c5c458e914e8985dd10d0f4d197b6e8f4239ea53e9fcc7e4415"
+    },
+    {
+      "path": "fieldnote-snapshot/content/articles/wagga-wagga-chiko-roll-debut/article.json",
+      "bytes": 3196,
+      "sha256": "839c8f77e43a0746dfcd2599a94cd918baf67fb0481ac08f529ad044667a04c3"
+    },
+    {
+      "path": "fieldnote-snapshot/content/articles/wagga-wagga-chiko-roll-debut/source-export/wagga-wagga-chiko-roll-debut.md",
+      "bytes": 1983,
+      "sha256": "392ce7065209f3f0a1575d0c604c55c487283f85f42e4ae32bec6d1ebcbd609f"
+    },
+    {
+      "path": "fieldnote-snapshot/public/articles/devils-river-murder-1863/images/optimized/melbourne-gaol-mccubbin-1884-1200.avif",
+      "bytes": 285067,
+      "sha256": "c8e8065e4631a971d68ccf7ea2edf395f6ce7ed0100636d324b0413bf439d21d"
+    },
+    {
+      "path": "fieldnote-snapshot/public/articles/devils-river-murder-1863/images/optimized/melbourne-gaol-mccubbin-1884-1200.webp",
+      "bytes": 325904,
+      "sha256": "5352e995353b0e3cf7c21f4c81bc0e6c950a99033800d9c554ed18abdd5cba22"
+    },
+    {
+      "path": "fieldnote-snapshot/public/articles/devils-river-murder-1863/images/optimized/melbourne-gaol-mccubbin-1884-1600.avif",
+      "bytes": 491470,
+      "sha256": "840c691c0a771214024009256ef0fcf903618c6a041c42420844fed08ff2fc55"
+    },
+    {
+      "path": "fieldnote-snapshot/public/articles/devils-river-murder-1863/images/optimized/melbourne-gaol-mccubbin-1884-1600.webp",
+      "bytes": 560854,
+      "sha256": "0075486eda5928a9abb4aa16747ee3fcdb21fbc7b10ffbcf93e1ed50d9b45617"
+    },
+    {
+      "path": "fieldnote-snapshot/public/articles/devils-river-murder-1863/images/optimized/melbourne-gaol-mccubbin-1884-2000.avif",
+      "bytes": 764297,
+      "sha256": "60cb99e05df027da450aee919fbc39f9e1399af6a5d3c632f92d85077283d28e"
+    },
+    {
+      "path": "fieldnote-snapshot/public/articles/devils-river-murder-1863/images/optimized/melbourne-gaol-mccubbin-1884-2000.webp",
+      "bytes": 867016,
+      "sha256": "cc7ed58c3f06f417051f53906dbd4f0bc6f906f97658c7d964c602fbfcd2a15e"
+    },
+    {
+      "path": "fieldnote-snapshot/public/articles/devils-river-murder-1863/images/optimized/melbourne-gaol-mccubbin-1884-5934.avif",
+      "bytes": 2151615,
+      "sha256": "dbe29b2c7c4cfe0fcd341547017625ec5a25204f9fa849981f3c9da5d81d66c3"
+    },
+    {
+      "path": "fieldnote-snapshot/public/articles/devils-river-murder-1863/images/optimized/melbourne-gaol-mccubbin-1884-5934.webp",
+      "bytes": 3820028,
+      "sha256": "0f4fc26488253dfa3bf766031fea128e594f4abfafca7adacc2eaf403d21d37a"
+    },
+    {
+      "path": "fieldnote-snapshot/public/articles/devils-river-murder-1863/images/optimized/melbourne-gaol-mccubbin-1884-720.avif",
+      "bytes": 104167,
+      "sha256": "34a0ead63e9dbf04f084a70d11d00a4d07cae5cfc78ef75a91a01153d14cc0b0"
+    },
+    {
+      "path": "fieldnote-snapshot/public/articles/devils-river-murder-1863/images/optimized/melbourne-gaol-mccubbin-1884-720.webp",
+      "bytes": 118468,
+      "sha256": "9ee163fd7e68fdb8d86b475de6cbc46c068ed39edd7ff139dfbe18396bc503bf"
+    },
+    {
+      "path": "fieldnote-snapshot/public/articles/devils-river-murder-1863/images/optimized/old-melbourne-gaol-aerial-1922-1200.avif",
+      "bytes": 200630,
+      "sha256": "2956571b072890d9da532ad76ef0c2fbf1470cf3a50df09a606118a54bda7a0b"
+    },
+    {
+      "path": "fieldnote-snapshot/public/articles/devils-river-murder-1863/images/optimized/old-melbourne-gaol-aerial-1922-1200.webp",
+      "bytes": 240198,
+      "sha256": "82f00677c626251340ad57fc2f22aea60e19dce0566ca65787ccfab1118d9dc6"
+    },
+    {
+      "path": "fieldnote-snapshot/public/articles/devils-river-murder-1863/images/optimized/old-melbourne-gaol-aerial-1922-1600.avif",
+      "bytes": 346547,
+      "sha256": "1aeff3817c6160cfe3e19429d6de7ee690d58a70df3650a4068b33e334fd2d94"
+    },
+    {
+      "path": "fieldnote-snapshot/public/articles/devils-river-murder-1863/images/optimized/old-melbourne-gaol-aerial-1922-1600.webp",
+      "bytes": 408244,
+      "sha256": "181f63ba9f8fff11ab8ce2eafcb91654010beee9599e6dbc82e019e4de8f17a2"
+    },
+    {
+      "path": "fieldnote-snapshot/public/articles/devils-river-murder-1863/images/optimized/old-melbourne-gaol-aerial-1922-2000.avif",
+      "bytes": 515279,
+      "sha256": "afdb67fbe4ad7d94a9bea0327d4d911fd120a959fb4bb370e0c0b029e1e0079c"
+    },
+    {
+      "path": "fieldnote-snapshot/public/articles/devils-river-murder-1863/images/optimized/old-melbourne-gaol-aerial-1922-2000.webp",
+      "bytes": 620210,
+      "sha256": "f4a981bbed5086c6cba4ead3dbf8fbb272bf6a0ef914973f543d01bddbdab838"
+    },
+    {
+      "path": "fieldnote-snapshot/public/articles/devils-river-murder-1863/images/optimized/old-melbourne-gaol-aerial-1922-2621.avif",
+      "bytes": 846841,
+      "sha256": "79fc9da9853d3364a00c453a273252fcd754282a44c4a3d8d5632139456ff713"
+    },
+    {
+      "path": "fieldnote-snapshot/public/articles/devils-river-murder-1863/images/optimized/old-melbourne-gaol-aerial-1922-2621.webp",
+      "bytes": 994934,
+      "sha256": "71a9253dd4d9c3024495313e7dbdabd1e7d0708184c29f5da0bf577fa7638e16"
+    },
+    {
+      "path": "fieldnote-snapshot/public/articles/devils-river-murder-1863/images/optimized/old-melbourne-gaol-aerial-1922-720.avif",
+      "bytes": 74496,
+      "sha256": "42f035722928184058d073e45627d4bfd7ad8f4e8c71b1a0754b84c60061277f"
+    },
+    {
+      "path": "fieldnote-snapshot/public/articles/devils-river-murder-1863/images/optimized/old-melbourne-gaol-aerial-1922-720.webp",
+      "bytes": 88292,
+      "sha256": "a98393d0774151989751755f411bfa34e77960afec0141c73aa3717d0bbee6cb"
+    },
+    {
+      "path": "fieldnote-snapshot/public/articles/devils-river-murder-1863/images/original/melbourne-gaol-mccubbin-1884.jpg",
+      "bytes": 5691044,
+      "sha256": "5b01ac528dc2f8df48588b814c4634533ccab21521147ab08a62f685b956ad68"
+    },
+    {
+      "path": "fieldnote-snapshot/public/articles/devils-river-murder-1863/images/original/old-melbourne-gaol-aerial-1922.jpg",
+      "bytes": 1907975,
+      "sha256": "97801212d618dc69fcad105ca5cc41863988ee4dce2befc349af42d76d59d862"
+    },
+    {
+      "path": "import-ready/devils-river-murder-1863/article.md",
+      "bytes": 5980,
+      "sha256": "20e09f12749cfe785a1fcc2ff8a0a04c0ef5994fff95ce1b722f7bd01bd22464"
+    },
+    {
+      "path": "import-ready/devils-river-murder-1863/images/melbourne-gaol-mccubbin-1884.jpg",
+      "bytes": 5691044,
+      "sha256": "5b01ac528dc2f8df48588b814c4634533ccab21521147ab08a62f685b956ad68"
+    },
+    {
+      "path": "import-ready/devils-river-murder-1863/images/old-melbourne-gaol-aerial-1922.jpg",
+      "bytes": 1907975,
+      "sha256": "97801212d618dc69fcad105ca5cc41863988ee4dce2befc349af42d76d59d862"
+    },
+    {
+      "path": "import-ready/melbourne-eight-hour-day-three-steps/article.md",
+      "bytes": 1875,
+      "sha256": "8ac51892af086c5c458e914e8985dd10d0f4d197b6e8f4239ea53e9fcc7e4415"
+    },
+    {
+      "path": "import-ready/wagga-wagga-chiko-roll-debut/article.md",
+      "bytes": 1983,
+      "sha256": "392ce7065209f3f0a1575d0c604c55c487283f85f42e4ae32bec6d1ebcbd609f"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1705,
+      "sha256": "8cdd6f44678be1f2e616125b7b0f693f1aa0fb5bf38f2cc6d41ab2294acf12f9"
+    }
+  ]
+}

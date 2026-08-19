@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "importId": "my-article-import-v1",
+  "article": {
+    "slug": "a-day-worth-remembering",
+    "category": "Travel",
+    "title": "A day worth remembering",
+    "summary": "A concise summary used on cards, search and social previews.",
+    "date": "23 July 2026",
+    "author": "Your name",
+    "tags": ["Travel", "Personal stories"],
+    "accent": "sky",
+    "art": "city",
+    "heroAssetKey": "hero",
+    "sections": [
+      {
+        "id": "the-first-stop",
+        "title": "The first stop",
+        "paragraphs": [
+          "The first paragraph of the section.",
+          "The second paragraph, followed by an image."
+        ],
+        "images": [
+          { "assetKey": "detail", "afterParagraph": 1 }
+        ]
+      }
+    ],
+    "relatedArticleIds": ["tokyo-skytree-and-shibuya"]
+  },
+  "assets": [
+    {
+      "key": "hero",
+      "file": "images/hero.jpg",
+      "title": "A wide opening view",
+      "alt": "Describe what is visible for readers who cannot see the image",
+      "caption": "The caption shown beneath the image."
+    },
+    {
+      "key": "detail",
+      "file": "images/detail.jpg",
+      "title": "A closer detail",
+      "alt": "A clear description of the detail photograph",
+      "caption": "A second caption tied to this exact asset."
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 640" width="900" height="640" font-family="ui-sans-serif, system-ui, sans-serif">
+  <style>
+    .page { fill: #fdfcf9; stroke: #d5d9e0; }
+    .box { fill: #ffffff; stroke: #c3cad6; }
+    .img { fill: #dbe6ea; stroke: #9fb6c0; }
+    .doc { fill: #f3ece2; stroke: #cbb9a2; }
+    .t { fill: #24303f; font-size: 13px; }
+    .tb { fill: #16202c; font-size: 15px; font-weight: 700; }
+    .sm { fill: #5a6675; font-size: 11px; }
+    .call { fill: #b3452a; font-size: 12px; font-family: ui-monospace, monospace; }
+    .lead { stroke: #b3452a; stroke-width: 1; stroke-dasharray: 3 3; fill: none; }
+    .bar { fill: #c8d2dc; }
+  </style>
+
+  <text x="12" y="22" class="tb">Anatomy of an article page — and the content field that controls each part</text>
+
+  <rect x="12" y="40" width="470" height="580" rx="8" class="page"/>
+
+  <!-- header -->
+  <rect x="12" y="40" width="470" height="34" rx="8" class="box"/>
+  <text x="26" y="61" class="t">Snoopy HQ  ·  Journal</text>
+  <text x="380" y="61" class="sm">search / theme</text>
+
+  <!-- breadcrumb -->
+  <text x="30" y="95" class="sm">← Journal / Culture</text>
+  <path class="lead" d="M300 91 H620"/>
+  <text x="626" y="95" class="call">article.category</text>
+
+  <!-- title -->
+  <text x="30" y="124" class="tb" font-size="19">Three steps to eight hours</text>
+  <path class="lead" d="M300 119 H620"/>
+  <text x="626" y="123" class="call">article.title</text>
+
+  <text x="30" y="146" class="t">A one-minute history of how Melbourne stonemasons…</text>
+  <path class="lead" d="M420 142 H620"/>
+  <text x="626" y="146" class="call">article.summary</text>
+
+  <text x="30" y="168" class="sm">By Al Zadid Yusuf · 22 July 2026 · Share</text>
+  <path class="lead" d="M300 164 H620"/>
+  <text x="626" y="168" class="call">article.author / .date</text>
+
+  <!-- hero -->
+  <rect x="30" y="182" width="434" height="96" rx="6" class="img"/>
+  <text x="42" y="206" class="sm">hero image (or generated EditorialArt if none)</text>
+  <path class="lead" d="M464 220 H620"/>
+  <text x="626" y="216" class="call">heroAssetKey</text>
+  <text x="626" y="232" class="sm">…or article.art + artLabel</text>
+
+  <!-- TOC -->
+  <rect x="30" y="292" width="118" height="140" rx="6" class="box"/>
+  <text x="40" y="311" class="sm" font-weight="700">In this article</text>
+  <rect x="40" y="322" width="98" height="12" rx="3" class="bar"/>
+  <rect x="40" y="340" width="98" height="12" rx="3" class="bar"/>
+  <rect x="40" y="358" width="98" height="12" rx="3" class="bar"/>
+  <rect x="40" y="376" width="98" height="12" rx="3" class="bar"/>
+  <path class="lead" d="M148 330 H620"/>
+  <text x="626" y="326" class="call">sections[].title</text>
+  <text x="626" y="342" class="sm">shown only when 4+ sections</text>
+  <text x="626" y="356" class="sm">or 1000+ words</text>
+
+  <!-- body -->
+  <text x="166" y="308" class="tb">A gunshot at Devil’s River</text>
+  <path class="lead" d="M400 304 H620"/>
+  <text x="626" y="308" class="call">sections[].title / .id</text>
+
+  <rect x="166" y="318" width="290" height="9" rx="3" class="bar"/>
+  <rect x="166" y="332" width="290" height="9" rx="3" class="bar"/>
+  <rect x="166" y="346" width="220" height="9" rx="3" class="bar"/>
+  <text x="466" y="342" class="sm">¶0</text>
+  <path class="lead" d="M400 372 H620"/>
+  <text x="626" y="376" class="call">paragraphs[0]</text>
+
+  <rect x="166" y="366" width="290" height="72" rx="6" class="img"/>
+  <text x="176" y="392" class="sm">image + caption</text>
+  <path class="lead" d="M456 404 H620"/>
+  <text x="626" y="400" class="call">images[] afterParagraph: 0</text>
+  <text x="626" y="416" class="sm">-1 = before the first paragraph</text>
+
+  <rect x="166" y="448" width="290" height="9" rx="3" class="bar"/>
+  <rect x="166" y="462" width="250" height="9" rx="3" class="bar"/>
+  <text x="466" y="470" class="sm">¶1</text>
+
+  <rect x="166" y="484" width="290" height="60" rx="6" class="doc"/>
+  <text x="176" y="504" class="sm" font-weight="700">Excel · 6 KB — Case chronology</text>
+  <text x="176" y="520" class="sm">[ Preview ]  [ Download ]</text>
+  <path class="lead" d="M456 514 H620"/>
+  <text x="626" y="510" class="call">documents[] afterParagraph: 1</text>
+
+  <!-- tags -->
+  <rect x="166" y="558" width="290" height="30" rx="6" class="box"/>
+  <text x="176" y="578" class="sm">Filed under: Culture · History</text>
+  <path class="lead" d="M456 574 H620"/>
+  <text x="626" y="578" class="call">article.tags</text>
+</svg>

@@ -1,0 +1,68 @@
+{
+  "slug": "melbourne-eight-hour-day-three-steps",
+  "category": "Work",
+  "title": "Three steps to eight hours: Melbourne’s 1856 campaign",
+  "dek": "A one-minute history of how Melbourne stonemasons helped establish the eight-hour working day—and who the first victory left out.",
+  "date": "July 22, 2026",
+  "readTime": "1 min read",
+  "author": "Al Zadid Yusuf",
+  "initials": "AZ",
+  "accent": "sky",
+  "sections": [
+    {
+      "paragraphs": [
+        "On 21 April 1856, Melbourne stonemasons stopped work and marched for an eight-hour day. The event became a landmark in Australian labour history, but the change was neither instant nor universal."
+      ],
+      "id": "section-melbourne-eight-hour-day-three-steps-section-1"
+    },
+    {
+      "heading": "The campaign in three steps",
+      "paragraphs": [],
+      "list": [
+        {
+          "label": "Set the date.",
+          "text": "A public meeting at Melbourne’s Queen’s Theatre resolved that the building trades would begin working eight-hour days on 21 April."
+        },
+        {
+          "label": "Walk out.",
+          "text": "Stonemasons left the University of Melbourne building site and marched towards Parliament House, gathering workers from other sites along the way."
+        },
+        {
+          "label": "Keep negotiating.",
+          "text": "In the following months, an agreement gave stonemasons eight-hour days without reducing the pay they had received for ten hours."
+        }
+      ],
+      "listStyle": "ordered",
+      "id": "section-melbourne-eight-hour-day-three-steps-the-campaign-in-three-steps"
+    },
+    {
+      "heading": "The part worth remembering",
+      "paragraphs": [
+        "The first victory covered only a minority of workers, mainly in building trades. Victoria did not pass an Eight Hours Act until 1916, and a nationwide 40-hour, five-day week was not approved until 1948.",
+        "The campaign’s enduring idea was a day divided into equal parts: work, recreation and rest. Melbourne’s Eight Hour Monument, at Russell and Victoria streets, still records that “888” principle."
+      ],
+      "id": "section-melbourne-eight-hour-day-three-steps-the-part-worth-remembering"
+    },
+    {
+      "heading": "Sources and further reading",
+      "paragraphs": [],
+      "references": [
+        {
+          "label": "National Museum of Australia — Eight-hour day",
+          "url": "https://www.nma.gov.au/defining-moments/resources/eight-hour-day"
+        },
+        {
+          "label": "University of Melbourne Archives — Melbourne Eight Hour Day Anniversary Committee",
+          "url": "https://archives.library.unimelb.edu.au/nodes/view/58444"
+        },
+        {
+          "label": "State Library Victoria — Moomba and the Eight Hour Monument",
+          "url": "https://blogs.slv.vic.gov.au/such-was-life/moomba/"
+        }
+      ],
+      "id": "section-melbourne-eight-hour-day-three-steps-sources-and-further-reading"
+    }
+  ],
+  "importedAt": "2026-07-22T04:26:51.639Z",
+  "id": "article:melbourne-eight-hour-day-three-steps"
+}

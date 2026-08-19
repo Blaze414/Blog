@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 480" width="920" height="480" font-family="ui-sans-serif, system-ui, sans-serif">
+  <style>
+    .b { fill: #ffffff; stroke: #c3cad6; }
+    .in { fill: #eef4f7; stroke: #8fb0bf; }
+    .out { fill: #eef6ee; stroke: #86ab86; }
+    .tmp { fill: #f7f2e8; stroke: #c9b58e; }
+    .tb { fill: #16202c; font-size: 15px; font-weight: 700; }
+    .t { fill: #24303f; font-size: 12.5px; }
+    .m { fill: #35414f; font-size: 12px; font-family: ui-monospace, monospace; }
+    .sm { fill: #63707f; font-size: 11px; }
+    .ar { stroke: #4a5a6b; stroke-width: 1.4; fill: none; marker-end: url(#a); }
+  </style>
+  <defs>
+    <marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+      <path d="M0,0 L7,3.2 L0,6.4 z" fill="#4a5a6b"/>
+    </marker>
+  </defs>
+
+  <text x="12" y="24" class="tb">What happens when you drop a package into the inbox</text>
+
+  <!-- 1 inbox -->
+  <rect x="14" y="44" width="230" height="150" rx="8" class="in"/>
+  <text x="28" y="66" class="t" font-weight="700">1 · You put this here</text>
+  <text x="28" y="90" class="m">imports/articles/my-story/</text>
+  <text x="40" y="110" class="m">article.md</text>
+  <text x="40" y="128" class="m">images/hero.jpg</text>
+  <text x="40" y="146" class="m">images/detail.jpg</text>
+  <text x="40" y="164" class="m">documents/notes.xlsx</text>
+  <text x="28" y="184" class="sm">nothing else is required</text>
+
+  <path class="ar" d="M248 118 H300"/>
+
+  <!-- 2 validate -->
+  <rect x="304" y="44" width="250" height="150" rx="8" class="b"/>
+  <text x="318" y="66" class="t" font-weight="700">2 · Validate &amp; inspect</text>
+  <text x="318" y="88" class="sm">• unknown fields → reject</text>
+  <text x="318" y="106" class="sm">• sharp reads real image size</text>
+  <text x="318" y="124" class="sm">• zip / PDF / UTF-8 structure check</text>
+  <text x="318" y="142" class="sm">• SHA-256 every file</text>
+  <text x="318" y="160" class="sm">• assign art_… / asset_… / doc_… ids</text>
+  <text x="318" y="182" class="sm">any failure stops here — nothing written</text>
+
+  <path class="ar" d="M558 118 H610"/>
+
+  <!-- 3 stage -->
+  <rect x="614" y="44" width="290" height="150" rx="8" class="tmp"/>
+  <text x="628" y="66" class="t" font-weight="700">3 · Stage privately</text>
+  <text x="628" y="90" class="m">.article-import/transactions/&lt;id&gt;/stage/</text>
+  <text x="628" y="112" class="sm">the complete article is built here first</text>
+  <text x="628" y="132" class="sm">journal.json records the state:</text>
+  <text x="628" y="150" class="m" font-size="11">preparing → staged → files-moved</text>
+  <text x="628" y="166" class="m" font-size="11">→ index-committed → complete</text>
+
+  <path class="ar" d="M759 198 V236"/>
+  <text x="770" y="222" class="sm">atomic rename()</text>
+
+  <!-- 4 commit -->
+  <rect x="14" y="240" width="890" height="150" rx="8" class="out"/>
+  <text x="28" y="262" class="t" font-weight="700">4 · Committed — this is now the published truth</text>
+
+  <text x="28" y="290" class="m">content/index.json</text>
+  <text x="28" y="308" class="sm">the site-wide registry (ids, slugs, full records)</text>
+
+  <text x="300" y="290" class="m">content/articles/art_….json</text>
+  <text x="300" y="308" class="sm">the canonical article, one file</text>
+
+  <text x="600" y="290" class="m">content/assets/art_…/asset_….json</text>
+  <text x="600" y="308" class="sm">image metadata + checksum</text>
+
+  <text x="28" y="340" class="m">public/images/articles/art_…/asset_….jpg</text>
+  <text x="28" y="358" class="sm">the web-served original</text>
+
+  <text x="380" y="340" class="m">public/documents/articles/art_…/doc_….xlsx</text>
+  <text x="380" y="358" class="sm">the web-served attachment</text>
+
+  <text x="700" y="340" class="m">.article-import/receipts/&lt;importId&gt;.json</text>
+  <text x="700" y="358" class="sm">proof of what was written</text>
+
+  <path class="ar" d="M120 394 V430"/>
+  <rect x="14" y="434" width="500" height="34" rx="6" class="b"/>
+  <text x="28" y="456" class="t">5 · Only now is <tspan class="m">imports/articles/my-story/</tspan> deleted for you.</text>
+
+  <rect x="530" y="434" width="374" height="34" rx="6" class="b"/>
+  <text x="544" y="456" class="t">If anything failed, your folder is still there, untouched.</text>
+</svg>
