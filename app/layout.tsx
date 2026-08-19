@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { headers } from "next/headers";
 import { Newsreader, Public_Sans } from "next/font/google";
 import { PageTransition } from "./components/motion/page-transition";
 import "./globals.css";
@@ -26,28 +25,38 @@ const ui = Public_Sans({
   style: ["normal", "italic"],
 });
 
-export async function generateMetadata(): Promise<Metadata> {
-  const incoming = await headers();
-  const host = incoming.get("x-forwarded-host") ?? incoming.get("host") ?? "localhost:3000";
-  const protocol = incoming.get("x-forwarded-proto") ?? (host.startsWith("localhost") ? "http" : "https");
-  const origin = `${protocol}://${host}`;
-  return {
-    metadataBase: new URL(origin),
-    title: { default: "Snoopy HQ Journal", template: "%s | Snoopy HQ Journal" },
-    description: "Stories, gift guides and thoughtful notes from the doghouse.",
-    icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
-    openGraph: {
-      title: "Snoopy HQ Journal",
-      description: "Stories, gift guides and thoughtful notes from the doghouse.",
-      type: "website",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: "Snoopy HQ Journal",
-      description: "Stories, gift guides and thoughtful notes from the doghouse.",
-    },
-  };
+/**
+ * The deployed origin. Vercel injects VERCEL_PROJECT_PRODUCTION_URL for the
+ * production domain and VERCEL_URL for preview deployments; set
+ * NEXT_PUBLIC_SITE_URL to override with a custom domain. Reading the request
+ * headers instead would force every page to render dynamically.
+ */
+function siteOrigin() {
+  const configured = process.env.NEXT_PUBLIC_SITE_URL;
+  if (configured) return configured.startsWith("http") ? configured : `https://${configured}`;
+
+  const vercelHost = process.env.VERCEL_PROJECT_PRODUCTION_URL ?? process.env.VERCEL_URL;
+  if (vercelHost) return `https://${vercelHost}`;
+
+  return "http://localhost:3000";
 }
+
+export const metadata: Metadata = {
+  metadataBase: new URL(siteOrigin()),
+  title: { default: "Snoopy HQ Journal", template: "%s | Snoopy HQ Journal" },
+  description: "Stories, gift guides and thoughtful notes from the doghouse.",
+  icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
+  openGraph: {
+    title: "Snoopy HQ Journal",
+    description: "Stories, gift guides and thoughtful notes from the doghouse.",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Snoopy HQ Journal",
+    description: "Stories, gift guides and thoughtful notes from the doghouse.",
+  },
+};
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (

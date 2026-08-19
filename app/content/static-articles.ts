@@ -1,7 +1,7 @@
 import type { BlogPost } from "./types";
 import { documentAssets, placeDocument } from "./document-assets";
 import { mediaAssets, placeMedia } from "./media-assets";
-import { localPreviewArticles } from "virtual:local-preview-articles";
+import { localPreviewArticles } from "./local-preview-articles";
 
 export const staticArticles = [
   ...localPreviewArticles,

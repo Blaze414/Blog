@@ -85,10 +85,11 @@ Every term below appears in this codebase and in the other documents. You do not
 
 | Term | Meaning here |
 | --- | --- |
-| **Cloudflare Worker** | A small server that runs on Cloudflare's edge network. It is *not* Node.js — no filesystem, no long-running processes. The site is deployed as one. |
-| **vinext** | The tool that lets a Next.js App Router app run as a Cloudflare Worker. This is why you run `npm run dev` and **not** `next dev` — `next dev` would start the wrong server. |
-| **Vite** | The build tool underneath. Fast dev server, produces the production bundle. `vite.config.ts` is where plugins are configured. |
-| **Miniflare / Wrangler** | Cloudflare's local emulator and CLI. They make `localhost:3000` behave like the real edge runtime. |
+| **Cloudflare Worker** | A small server on Cloudflare's edge network. The project can still build for it (`npm run build:worker`), but it is no longer the deploy target. |
+| **Vercel** | Where the site is deployed. `npm run build` runs `next build`, and Vercel serves the result. |
+| **vinext** | An alternative build that runs the same app as a Cloudflare Worker (`npm run build:worker`). Kept working, but not the deploy target. |
+| **Vite** | The build tool used by the Cloudflare path and by the script that copies the document-renderer assets. Configured in `vite.config.ts`. The Vercel build does not use it. |
+| **Miniflare / Wrangler** | Cloudflare's local emulator and CLI, used only by the Worker build. |
 | **HMR** | Hot Module Replacement. Save a file, the browser updates without a full reload. |
 | **D1 / R2** | Cloudflare's SQL database and object storage. Both are *declared* in this project but **unused** — nothing reads from them. Ignore them until someone needs them. |
 
@@ -146,9 +147,10 @@ That one command does more than it looks like. Here is the chain, because unders
 
 ```
 npm run dev
-├── predev  → npm run optimize:images        (regenerates responsive image variants)
+├── predev  → npm run assets:viewer          (copies the document-renderer assets)
+│            npm run optimize:images         (regenerates responsive image variants)
 └── dev     → node scripts/dev-with-imports.mjs
-             ├── spawns: npm run dev:site    → vinext dev   (the actual website)
+             ├── spawns: npm run dev:site    → next dev  (the actual website)
              └── spawns: scripts/watch-article-imports.mjs  (the import watcher)
 ```
 
@@ -157,16 +159,18 @@ Two long-running processes, one terminal. If either dies, the wrapper restarts t
 ### What healthy output looks like
 
 ```
+> assets:viewer
+[file-viewer:vite-plugin] Copied 18/18 renderer assets to …/public
+
 > optimize:images
 All responsive image variants are current.
 
 > dev:site
 [article-watch] Watching imports every 1200ms. Packages are imported after two stable scans.
 
-  vinext dev  (Vite 8.0.13)
-
-[file-viewer:vite-plugin] Copied 18/18 renderer assets to …/public
-  ➜  Local:   http://localhost:3000/
+  ▲ Next.js 16.2.6 (Turbopack)
+  - Local:   http://localhost:3000
+  ✓ Ready
 ```
 
 Read those four lines carefully, because each one tells you a subsystem started correctly:
@@ -175,8 +179,8 @@ Read those four lines carefully, because each one tells you a subsystem started 
 | --- | --- |
 | `All responsive image variants are current` | Image optimiser ran; every photo has its AVIF/WebP sizes |
 | `[article-watch] Watching imports every 1200ms` | The import watcher is live and will pick up folders you drop in |
-| `Copied 18/18 renderer assets` | The document-preview engines (workers, WASM, fonts) were copied into `public/vendor/`. **If this line is missing, every document preview will fail.** |
-| `➜ Local: http://localhost:3000/` | The site is up |
+| `Copied 18/18 renderer assets` | The document-preview engines (workers, WASM, fonts) were copied into `public/vendor/` by `npm run assets:viewer`. **If this line is missing, every document preview will fail.** |
+| `✓ Ready` / `Local: http://localhost:3000` | The site is up |
 
 Open <http://localhost:3000>. Leave the terminal running while you work — saving a file updates the browser automatically.
 
@@ -191,8 +195,10 @@ Stop it with `Ctrl-C`.
 | `npm run import:articles` | Imports waiting packages, then optimises images | When you are not running `dev` |
 | `npm run optimize:images` | Regenerates image variants | Rarely — `dev` and `build` do it |
 | `npm run lint` | Style and correctness checks | Before committing |
-| `npm test` | Builds the site, then runs 14 tests | Before committing |
-| `npm run build` | Production build | Verifying a deploy |
+| `npm test` | Builds the Cloudflare Worker bundle, then runs 14 tests | Before committing |
+| `npm run build` | Production build (`next build`) | Verifying a deploy |
+| `npm run verify:build` | Production build **and** checks the deployable output | Before deploying to Vercel |
+| `npm run assets:viewer` | Copies the document-preview engines into `public/vendor/` | Rarely — `dev` and `build` do it |
 
 ---
 
@@ -357,7 +363,8 @@ Editing published content is done by **re-importing**, not by editing these file
 | `vite.config.ts` | Build plugins: the file-viewer asset copier, the dev-only document route, the dev-only preview article, Cloudflare bindings |
 | `worker/index.ts` | The Cloudflare Worker entry point |
 | `public/_headers` | HTTP headers in production (caching, document MIME types) |
-| `.openai/hosting.json` | Declares optional D1/R2 bindings |
+| `vercel.json` | Deploy settings and the HTTP headers attachments need |
+| `.vercelignore` | What never reaches a deployment (local fixtures, Worker build, tooling) |
 
 ---
 
@@ -609,7 +616,7 @@ Deep detail lives in [handbook §8](PROJECT-HANDBOOK.md).
 Reader requests /blog/a-quiet-morning-in-the-archive
         │
         ▼
-Cloudflare Worker (worker/index.ts, generated by vinext)
+Vercel serves the Next.js build output
         │
         ├── the page was pre-rendered at build time  →  return the HTML
         │

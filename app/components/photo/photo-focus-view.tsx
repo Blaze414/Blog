@@ -31,7 +31,7 @@ export function PhotoFocusView({ image, article }: PhotoFocusViewProps) {
         <figure className="photo-focus-figure" aria-labelledby="photo-title">
           <div className="photo-focus-stage">
             <ResponsiveImage
-              image={{ ...image, afterParagraph: 0 }}
+              image={image}
               loading="eager"
               sizes="(max-width: 1480px) calc(100vw - 64px), 1440px"
             />

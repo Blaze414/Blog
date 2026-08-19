@@ -1,0 +1,21 @@
+# Local QA fixtures (may contain private files) — never deploy.
+.local-test-assets
+
+# Cloudflare Worker build path, unused on Vercel.
+dist
+.wrangler
+worker
+vite.config.ts
+
+# Tooling and docs artifacts that do not affect the deployed site.
+.article-import
+graphify-out
+imports
+exports
+.claude
+.codex
+.remember
+docs/screenshots
+.remember
+graphify-out
+exports

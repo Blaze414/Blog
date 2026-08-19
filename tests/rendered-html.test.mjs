@@ -47,7 +47,7 @@ test("server-renders the editorial homepage", async () => {
   assert.match(html, /aria-expanded="true"/);
   assert.match(html, /id="culture-stories"/);
   assert.match(html, /Skip to main content/);
-  assert.doesNotMatch(html, /codex-preview|react-loading-skeleton/i);
+  assert.doesNotMatch(html, /react-loading-skeleton/i);
 
   const latestSection = html.slice(html.indexOf('id="latest"'), html.indexOf('<section class="category-strip"'));
   assert.match(latestSection, /Tokyo Skytree and Shibuya/);

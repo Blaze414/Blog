@@ -4,7 +4,7 @@
 
 What is unusual is how content gets in. There is no admin panel and no database: you put a folder of files on disk, and the site validates it, publishes it, and rebuilds itself around it. Photographs automatically get responsive sizes and a zoomable viewer. Word, PowerPoint, Excel, CSV and PDF attachments open **inside the page** — nothing is uploaded anywhere, and readers never have to download a file to read it.
 
-**Stack** — Next.js 16 App Router · React 19 Server Components · [vinext](https://github.com/cloudflare/vinext) on Cloudflare Workers · framer-motion · sharp · [Flyfish `@file-viewer`](https://github.com/flyfish-dev/file-viewer)
+**Stack** — Next.js 16 App Router · React 19 Server Components · framer-motion · sharp · [Flyfish `@file-viewer`](https://github.com/flyfish-dev/file-viewer). Deploys to **Vercel**; a Cloudflare Worker build ([vinext](https://github.com/cloudflare/vinext)) is kept as an alternative target.
 
 ---
 
@@ -247,9 +247,11 @@ Full instructions — adding, editing, removing articles and assets — are in t
 
 | Command | Does |
 | --- | --- |
-| `npm run dev` | Site + import watcher |
-| `npm run build` | Production build (vinext) |
-| `npm test` | Build, then import and rendered-HTML checks |
+| `npm run dev` | Site (Next) + import watcher |
+| `npm run build` | Production build (`next build`) — this is what Vercel runs |
+| `npm run verify:build` | Production build, then assert the deployable output is correct |
+| `npm test` | Cloudflare Worker build, then import and rendered-HTML checks |
+| `npm run build:worker` | Cloudflare Worker build (the alternative deploy target) |
 | `npm run lint` | ESLint |
 | `npm run import:articles:dry-run` | Validate pending packages, change nothing |
 | `npm run import:articles` | Import pending packages and optimise images |
@@ -413,6 +415,70 @@ Read the Flyfish docs for **your** renderer before writing any component code �
 
 ---
 
+## Deploying to Vercel
+
+The project builds with `next build` and deploys as a standard Next.js app.
+
+### First deploy
+
+```bash
+npm i -g vercel        # once
+vercel login
+vercel                 # preview deployment
+vercel --prod          # production deployment
+```
+
+Or connect the repository in the Vercel dashboard — no build settings to change, `vercel.json` declares them.
+
+### What the build does on Vercel
+
+```
+npm install            # devDependencies included, which the build needs
+prebuild
+├── npm run assets:viewer   → copies the Flyfish renderer assets into public/vendor/
+└── npm run optimize:images → generates AVIF/WebP variants into public/_optimized/
+next build             → prerenders every article and photo page
+```
+
+Both `public/vendor/` and `public/_optimized/` are gitignored and regenerated at build time, so nothing large is committed and nothing is missing at runtime.
+
+### Settings
+
+| Setting | Value |
+| --- | --- |
+| Framework preset | Next.js (auto-detected) |
+| Build command | `npm run build` (from `vercel.json`) |
+| Install command | default |
+| Node version | 22.x |
+| Environment variables | none required |
+
+`NEXT_PUBLIC_SITE_URL` is optional: set it to your custom domain so Open Graph URLs are absolute and correct. Without it the build falls back to Vercel's own deployment URL.
+
+### What is excluded from the deployment
+
+`.vercelignore` keeps local QA fixtures (`.local-test-assets/`), the Cloudflare Worker build path, the import inbox and tooling artifacts out of the upload.
+
+### Verify before deploying
+
+```bash
+npm run verify:build
+```
+
+Builds, then asserts the home page, articles and photo permalinks prerendered, the dev-only fixture article is **absent**, and the document-renderer assets are present.
+
+### The Cloudflare alternative
+
+The Worker build is still wired up and tested:
+
+```bash
+npm run build:worker
+npx wrangler deploy --config dist/server/wrangler.json
+```
+
+`npm test` exercises that path (`tests/rendered-html.test.mjs` renders through the Worker bundle). Cloudflare-specific pieces — `worker/index.ts`, `vite.config.ts`, `public/_headers` — are unused by the Vercel build; the equivalent headers live in `vercel.json`.
+
+---
+
 ## Architecture in one paragraph
 
 Content is frozen plain data (`app/content/`), never JSX. A registry factory builds id/slug lookups at module load and fails the build on duplicates. Pages are Server Components; only 20 of 45 component files are client islands. The Worker serves static HTML and static assets — no runtime image processing, no database in the request path (D1 and R2 bindings are declared but unused). Imports are transactional: staged, atomically renamed, receipted. See the [handbook](docs/PROJECT-HANDBOOK.md) for the long version.
@@ -430,58 +496,24 @@ The dev-only **Local document preview laboratory** article at `/blog/local-docum
 | `doc_demo_care_notes.pdf` | Four pages, tables, page navigation, range-request streaming |
 | `doc_demo_collection_inventory.csv` | 11 columns × 120 rows for wide-table scrolling |
 
-Fixtures live in `.local-test-assets/documents/`, which Git ignores. The Vite dev server exposes only allowlisted `.pptx`, `.docx`, `.pdf` and `.csv` filenames directly under `/__local-test-documents/` (no subdirectories), with range support, no caching and `nosniff`. A development-only virtual module supplies the article; production builds receive an empty module, so neither the metadata nor the files reach the deployable output.
+Fixtures live in `.local-test-assets/documents/`, which Git ignores. A development-only route handler ([`app/local-test-documents/[filename]/route.ts`](app/local-test-documents/%5Bfilename%5D/route.ts)) serves only allowlisted `.pptx`, `.docx`, `.xlsx`, `.pdf` and `.csv` filenames directly under `/local-test-documents/` (no subdirectories), with byte-range support, no caching and `nosniff`. It returns 404 when `NODE_ENV` is `production`, and `.vercelignore` keeps the files out of the deployment entirely. `app/content/local-preview-articles.ts` gates the article on `NODE_ENV`, so the production bundle contains a static empty array and the fixture metadata is dropped by dead-code elimination — verified by `npm run verify:build`.
 
 To swap a fixture, drop the file into that folder and update the matching record in [`app/content/local-preview-article.ts`](app/content/local-preview-article.ts) — `filename`, `src`, `extension`, `mimeType` and `size` must all agree, because the viewer throws when a file's extension does not match its record. Anything you keep out of the served set (private QA files, real client documents) can sit in `.local-test-assets/documents/private/`: still gitignored, and unreachable by the dev route because the middleware rejects any path separator.
 
 ---
 
-## Platform notes (vinext starter)
+## Alternative target: Cloudflare Workers
 
-<details>
-<summary>Bindings, workspace auth headers and ChatGPT sign-in</summary>
+The project can still build and deploy as a Cloudflare Worker, which is how it ran before the move to Vercel:
 
-The project runs on [vinext](https://github.com/cloudflare/vinext) with optional Cloudflare D1 and Drizzle support. It does not use `wrangler.jsonc`.
-
-- Site code lives under `app/`
-- `.openai/hosting.json` declares optional Sites D1 and R2 bindings
-- `vite.config.ts` simulates declared bindings for local development
-- `db/schema.ts` starts intentionally empty
-- `examples/d1/` contains an optional D1 example surface
-- `drizzle.config.ts` supports local migration generation
-
-**Workspace auth headers.** OpenAI workspace sites can read the current user's email from `oai-authenticated-user-email`. SIWC-authenticated sites may also receive `oai-authenticated-user-full-name` when the user's SIWC profile has a non-empty `name` claim; the value is percent-encoded UTF-8 and accompanied by `oai-authenticated-user-full-name-encoding: percent-encoded-utf-8`. Treat the full name as optional and fall back to email:
-
-```tsx
-import { headers } from "next/headers";
-
-export default async function Home() {
-  const requestHeaders = await headers();
-  const email = requestHeaders.get("oai-authenticated-user-email");
-  const encodedFullName = requestHeaders.get("oai-authenticated-user-full-name");
-  const fullName =
-    encodedFullName &&
-    requestHeaders.get("oai-authenticated-user-full-name-encoding") ===
-      "percent-encoded-utf-8"
-      ? decodeURIComponent(encodedFullName)
-      : null;
-
-  const displayName = fullName ?? email;
-  // ...
-}
+```bash
+npm run build:worker
+npx wrangler deploy --config dist/server/wrangler.json
 ```
 
-**Optional dispatch-owned ChatGPT sign-in.** Import the helpers from `app/chatgpt-auth.ts`:
+That path uses [`worker/index.ts`](worker/index.ts), [`vite.config.ts`](vite.config.ts) and [`public/_headers`](public/_headers); the Vercel build ignores all three. `npm test` exercises it, because `tests/rendered-html.test.mjs` renders through the Worker bundle.
 
-- `getChatGPTUser()` for optional signed-in UI
-- `requireChatGPTUser(returnTo)` for server-rendered pages that should send anonymous visitors through Sign in with ChatGPT
-- `chatGPTSignInPath(returnTo)` / `chatGPTSignOutPath(returnTo)` for browser links or actions
-- Pass a same-origin relative `returnTo`; the helper validates and encodes it
-- Mark protected pages with `export const dynamic = "force-dynamic"`
-
-Dispatch owns `/signin-with-chatgpt`, `/signout-with-chatgpt`, `/callback`, the OAuth cookies and identity header injection — do not implement app routes for those paths. SIWC establishes identity only; it does not prove workspace membership. Use the hosting platform's access policy controls or explicit server-side allowlist checks.
-
-</details>
+Optional Cloudflare bindings (D1, R2) are declared as `null` at the top of `vite.config.ts` — nothing reads from a database today, and `db/schema.ts` is intentionally empty.
 
 ---
 

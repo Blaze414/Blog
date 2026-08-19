@@ -1604,11 +1604,14 @@ re-import, and rollback leaving no partial state.
 
 | Command | What it does |
 |---|---|
-| `npm run dev` | Optimises images (`predev`), then starts the vinext dev server **and** the import watcher together |
-| `npm run dev:site` | Dev server only — no watcher |
-| `npm run build` | Optimises images (`prebuild`), then `vinext build` → `dist/` |
-| `npm start` | Serves the built output locally |
-| `npm test` | Build + both suites |
+| `npm run dev` | Copies renderer assets and optimises images (`predev`), then starts `next dev` **and** the import watcher together |
+| `npm run dev:site` | `next dev` only — no watcher |
+| `npm run build` | Copies renderer assets and optimises images (`prebuild`), then `next build` → `.next/` — **this is what Vercel runs** |
+| `npm run verify:build` | `npm run build`, then `scripts/verify-next-build.mjs` asserts the deployable output |
+| `npm start` | `next start` — serves the production build locally |
+| `npm run build:worker` / `dev:worker` / `start:worker` | The Cloudflare Worker path via vinext → `dist/` |
+| `npm run assets:viewer` | Copies the Flyfish renderer assets into `public/vendor/` (`scripts/copy-viewer-assets.mjs`) |
+| `npm test` | Worker build + both suites (the render tests load `dist/server/index.js`) |
 | `npm run lint` | ESLint (ignores `dist`, `.next`, `public/vendor`) |
 | `npm run import:articles:dry-run` | Validate every waiting package; change nothing |
 | `npm run import:articles` | Import + regenerate image variants |
@@ -1632,11 +1635,31 @@ If the site looks unstyled or images 404 after a fresh clone, you have skipped
 
 ### Deployment shape
 
-The output is a Cloudflare Worker (`dist/server/`) plus static assets (`dist/client/`).
-`.openai/hosting.json` declares optional D1/R2 bindings (both `null` today);
-`build/sites-vite-plugin.ts` and the `@cloudflare/vite-plugin` wire up the platform.
-`public/_headers` ships with the client assets and configures caching and document MIME
-behaviour.
+**Primary target: Vercel.** `next build` prerenders every route (`○` static, `●` SSG) into
+`.next/`; there is no per-request work. `vercel.json` declares the framework, the build
+command and the document headers that `public/_headers` provides on Cloudflare
+(`Content-Type`, `Content-Disposition: inline`, `nosniff`, plus immutable caching for
+`/vendor/` and `/_optimized/`). `.vercelignore` excludes `.local-test-assets/`, `dist/`,
+`worker/`, `imports/` and tooling artifacts.
+
+Two build-time steps replace what `vite.config.ts` used to do, because the Vercel build
+never loads that file:
+
+| Was | Now |
+|---|---|
+| `@file-viewer/vite-plugin` copying renderer assets during the Vite build | `npm run assets:viewer` → `scripts/copy-viewer-assets.mjs` runs the same plugin through a throwaway Vite build, so the asset list stays owned by the library |
+| `virtual:local-preview-articles` (Vite virtual module) | `app/content/local-preview-articles.ts`, gated on `NODE_ENV` so production dead-code-eliminates the fixture |
+| `localTestDocuments()` serve-only middleware | `app/local-test-documents/[filename]/route.ts`, a dev-only route handler with the same allowlist, range support and 404-in-production guard |
+
+Metadata no longer calls `headers()`; `app/layout.tsx` derives the origin from
+`NEXT_PUBLIC_SITE_URL` / `VERCEL_PROJECT_PRODUCTION_URL` / `VERCEL_URL`, which is what
+keeps every route static rather than dynamic.
+
+**Alternative target: Cloudflare Workers.** `npm run build:worker` still produces
+`dist/server/` + `dist/client/`, deployable with
+`npx wrangler deploy --config dist/server/wrangler.json`. Optional D1/R2 bindings are
+declared as `null` constants at the top of `vite.config.ts`, and `public/_headers` applies
+there.
 
 ---
 
@@ -1720,7 +1743,6 @@ Honest inventory, so nobody rediscovers these the hard way.
 | **The newsletter form is a prop** | Submitting stores nothing. |
 | **`components/ui/text-reveal.tsx` and `lib/utils.ts`** | Sit outside `app/` and are not imported by any page — leftovers from experimentation. Safe to delete once confirmed. |
 | **The design-system MASTER.md does not match the build** | Different fonts and accent colour. Historical. |
-| **README describes the starter, not this site** | The top of `README.md` is still `vinext-starter` boilerplate about ChatGPT sign-in and D1. The article-specific sections lower down are accurate. |
 | **`related` is not bidirectional** | Article A linking to B does not make B link back. Set it on both if you want symmetry. |
 | **Only the first image is used on cards** | `mediaForArticle(post.id)[0]`. There is no way to choose a different card image without reordering assets. |
 | **Search is client-side and unindexed** | Fine at this size; a few hundred articles would need a real index. |

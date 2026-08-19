@@ -4,13 +4,15 @@ import path from "node:path";
 import vinext from "vinext";
 import { defineConfig, type Plugin } from "vite";
 import { fileViewerRenderers } from "@file-viewer/vite-plugin";
-import hostingConfig from "./.openai/hosting.json";
 import { sites } from "./build/sites-vite-plugin";
 
 const SITE_CREATOR_PLACEHOLDER_DATABASE_ID =
   "00000000-0000-4000-8000-000000000000";
 
-const { d1, r2 } = hostingConfig;
+// Optional Cloudflare bindings for the alternative Worker deploy. Neither is
+// used by the site today; set a binding name here to enable one.
+const d1: string | null = null;
+const r2: string | null = null;
 
 const LOCAL_TEST_DOCUMENT_PREFIX = "/__local-test-documents/";
 const LOCAL_TEST_DOCUMENT_ROOT = path.resolve(".local-test-assets/documents");
@@ -131,9 +133,6 @@ function localTestDocuments(): Plugin {
   };
 }
 
-// macOS Seatbelt blocks FSEvents, so Codex previews need polling for HMR.
-const isCodexSeatbeltSandbox = process.env.CODEX_SANDBOX === "seatbelt";
-
 const localBindingConfig = {
   main: "./worker/index.ts",
   compatibility_flags: ["nodejs_compat"],
@@ -176,9 +175,6 @@ export default defineConfig(async ({ command }) => {
         util: path.resolve("node_modules/util/util.js"),
       },
     },
-    server: isCodexSeatbeltSandbox
-      ? { watch: { useFsEvents: false, usePolling: true } }
-      : undefined,
     plugins: [
       localPreviewArticles(command === "serve"),
       fileViewerRenderers({

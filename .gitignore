@@ -54,3 +54,27 @@ next-env.d.ts
 
 # User-supplied document fixtures served only by the local Vite development server
 /.local-test-assets/
+
+# ---------------------------------------------------------------------------
+# AI / assistant tooling — local only, never published to the repository.
+# These folders hold assistant configuration, session history, skill data and
+# generated knowledge graphs. None of it is used to build or run the site.
+# ---------------------------------------------------------------------------
+/.claude/
+/.codex/
+/.cursor/
+/.continue/
+/.windsurf/
+/.aider*/
+/.remember/
+/graphify-out/
+CLAUDE.md
+AGENTS.md
+GEMINI.md
+.cursorrules
+.aider.*
+.copilot-instructions.md
+.github/copilot-instructions.md
+
+# Local export bundles (large, regenerable, not part of the site)
+/exports/
