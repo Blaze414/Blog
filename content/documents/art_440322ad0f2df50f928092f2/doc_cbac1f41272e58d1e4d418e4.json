@@ -1,0 +1,13 @@
+{
+  "id": "doc_cbac1f41272e58d1e4d418e4",
+  "articleId": "art_440322ad0f2df50f928092f2",
+  "articleSlug": "reading-a-document-without-downloading-it",
+  "title": "Collection inventory",
+  "filename": "collection-inventory.csv",
+  "src": "/documents/articles/art_440322ad0f2df50f928092f2/doc_cbac1f41272e58d1e4d418e4.csv",
+  "extension": "csv",
+  "mimeType": "text/csv; charset=utf-8",
+  "size": 12738,
+  "caption": "Eleven columns and 120 rows of demonstration data, for testing wide tables and scrolling.",
+  "sha256": "a888e8b601cbcb563c0e847b1290d9060b0be357d1728431fe61bbf5ffa2cac3"
+}

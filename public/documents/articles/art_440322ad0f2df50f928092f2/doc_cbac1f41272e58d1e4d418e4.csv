@@ -1,0 +1,143 @@
+SNOOPY HQ — COLLECTION INVENTORY (DEMONSTRATION DATA)
+
+SUMMARY
+Total items,120
+Catalogued,120
+On display,42
+In storage,78
+Last audit,2026-07-14
+Next audit,2027-07-13
+
+ITEMS
+Item ID,Title,Year,Category,Condition,Shelf,Acquired,Source,Value (AUD),Displayed,Notes
+SHQ-001,Tin lunchbox — tinware 001,1967,Tinware,Good,B2,2011-02-02,Market stall,31.24,No,
+SHQ-002,Ceramic mug — ceramics 002,1974,Ceramics,Fair,C3,2012-03-03,Donation,42.51,No,
+SHQ-003,Comic strip print — prints 003,1981,Prints,Poor,D4,2013-04-04,Trade,60.51,Yes,
+SHQ-004,Plush figure — plush 004,1988,Plush,Excellent,E1,2014-05-05,Estate sale,67.72,No,
+SHQ-005,Desk calendar — paper 005,1995,Paper,Good,F2,2015-06-06,Market stall,85.36,No,Catalogued from the July audit; photographed at shelf height.
+SHQ-006,Vinyl record — media 006,2002,Media,Fair,G3,2016-07-07,Donation,96.66,Yes,
+SHQ-007,Postcard set — homeware 007,2009,Homeware,Poor,H4,2017-08-08,Trade,106.58,No,
+SHQ-008,Wall clock — pins 008,2016,Pins,Excellent,A1,2018-09-09,Estate sale,124.07,No,
+SHQ-009,Snow globe — tinware 009,1963,Tinware,Good,B2,2019-10-10,Market stall,132.37,Yes,
+SHQ-010,Badge set — ceramics 010,1970,Ceramics,Fair,C3,2020-11-11,Donation,149.34,No,Catalogued from the July audit; photographed at shelf height.
+SHQ-011,Serving tray — prints 011,1977,Prints,Poor,D4,2021-12-12,Trade,158.7,No,
+SHQ-012,Money box — plush 012,1984,Plush,Excellent,E1,2022-01-13,Estate sale,171.91,Yes,
+SHQ-013,Bookend pair — paper 013,1991,Paper,Good,F2,2023-02-14,Market stall,188.25,No,
+SHQ-014,Wrapping paper roll — media 014,1998,Media,Fair,G3,2024-03-15,Donation,205.27,No,
+SHQ-015,Enamel pin — homeware 015,2005,Homeware,Poor,H4,2025-04-16,Trade,211.24,Yes,Catalogued from the July audit; photographed at shelf height.
+SHQ-016,Tin lunchbox — pins 016,2012,Pins,Excellent,A1,2010-05-17,Estate sale,225.23,No,
+SHQ-017,Ceramic mug — tinware 017,2019,Tinware,Good,B2,2011-06-18,Market stall,242.27,No,
+SHQ-018,Comic strip print — ceramics 018,1966,Ceramics,Fair,C3,2012-07-19,Donation,258.48,Yes,
+SHQ-019,Plush figure — prints 019,1973,Prints,Poor,D4,2013-08-20,Trade,267.77,No,
+SHQ-020,Desk calendar — plush 020,1980,Plush,Excellent,E1,2014-09-21,Estate sale,278.97,No,Catalogued from the July audit; photographed at shelf height.
+SHQ-021,Vinyl record — paper 021,1987,Paper,Good,F2,2015-10-22,Market stall,297.76,Yes,
+SHQ-022,Postcard set — media 022,1994,Media,Fair,G3,2016-11-23,Donation,301.47,No,
+SHQ-023,Wall clock — homeware 023,2001,Homeware,Poor,H4,2017-12-24,Trade,322.58,No,
+SHQ-024,Snow globe — pins 024,2008,Pins,Excellent,A1,2018-01-25,Estate sale,29.9,Yes,
+SHQ-025,Badge set — tinware 025,2015,Tinware,Good,B2,2019-02-26,Market stall,41.44,No,Catalogued from the July audit; photographed at shelf height.
+SHQ-026,Serving tray — ceramics 026,1962,Ceramics,Fair,C3,2020-03-27,Donation,54.18,No,
+SHQ-027,Money box — prints 027,1969,Prints,Poor,D4,2021-04-01,Trade,69.08,Yes,
+SHQ-028,Bookend pair — plush 028,1976,Plush,Excellent,E1,2022-05-02,Estate sale,87.16,No,
+SHQ-029,Wrapping paper roll — paper 029,1983,Paper,Good,F2,2023-06-03,Market stall,93.81,No,
+SHQ-030,Enamel pin — media 030,1990,Media,Fair,G3,2024-07-04,Donation,110.82,Yes,Catalogued from the July audit; photographed at shelf height.
+SHQ-031,Tin lunchbox — homeware 031,1997,Homeware,Poor,H4,2025-08-05,Trade,124.39,No,
+SHQ-032,Ceramic mug — pins 032,2004,Pins,Excellent,A1,2010-09-06,Estate sale,134.72,No,
+SHQ-033,Comic strip print — tinware 033,2011,Tinware,Good,B2,2011-10-07,Market stall,149.48,Yes,
+SHQ-034,Plush figure — ceramics 034,2018,Ceramics,Fair,C3,2012-11-08,Donation,157.63,No,
+SHQ-035,Desk calendar — prints 035,1965,Prints,Poor,D4,2013-12-09,Trade,170.6,No,Catalogued from the July audit; photographed at shelf height.
+SHQ-036,Vinyl record — plush 036,1972,Plush,Excellent,E1,2014-01-10,Estate sale,185.06,Yes,
+SHQ-037,Postcard set — paper 037,1979,Paper,Good,F2,2015-02-11,Market stall,202.8,No,
+SHQ-038,Wall clock — media 038,1986,Media,Fair,G3,2016-03-12,Donation,213.28,No,
+SHQ-039,Snow globe — homeware 039,1993,Homeware,Poor,H4,2017-04-13,Trade,225.14,Yes,
+SHQ-040,Badge set — pins 040,2000,Pins,Excellent,A1,2018-05-14,Estate sale,240.86,No,Catalogued from the July audit; photographed at shelf height.
+SHQ-041,Serving tray — tinware 041,2007,Tinware,Good,B2,2019-06-15,Market stall,252.53,No,
+SHQ-042,Money box — ceramics 042,2014,Ceramics,Fair,C3,2020-07-16,Donation,264.0,Yes,
+SHQ-043,Bookend pair — prints 043,1961,Prints,Poor,D4,2021-08-17,Trade,281.94,No,
+SHQ-044,Wrapping paper roll — plush 044,1968,Plush,Excellent,E1,2022-09-18,Estate sale,293.99,No,
+SHQ-045,Enamel pin — paper 045,1975,Paper,Good,F2,2023-10-19,Market stall,302.44,Yes,Catalogued from the July audit; photographed at shelf height.
+SHQ-046,Tin lunchbox — media 046,1982,Media,Fair,G3,2024-11-20,Donation,318.74,No,
+SHQ-047,Ceramic mug — homeware 047,1989,Homeware,Poor,H4,2025-12-21,Trade,31.25,No,
+SHQ-048,Comic strip print — pins 048,1996,Pins,Excellent,A1,2010-01-22,Estate sale,47.75,Yes,
+SHQ-049,Plush figure — tinware 049,2003,Tinware,Good,B2,2011-02-23,Market stall,59.29,No,
+SHQ-050,Desk calendar — ceramics 050,2010,Ceramics,Fair,C3,2012-03-24,Donation,67.88,No,Catalogued from the July audit; photographed at shelf height.
+SHQ-051,Vinyl record — prints 051,2017,Prints,Poor,D4,2013-04-25,Trade,87.8,Yes,
+SHQ-052,Postcard set — plush 052,1964,Plush,Excellent,E1,2014-05-26,Estate sale,92.18,No,
+SHQ-053,Wall clock — paper 053,1971,Paper,Good,F2,2015-06-27,Market stall,108.18,No,
+SHQ-054,Snow globe — media 054,1978,Media,Fair,G3,2016-07-01,Donation,124.57,Yes,
+SHQ-055,Badge set — homeware 055,1985,Homeware,Poor,H4,2017-08-02,Trade,131.52,No,Catalogued from the July audit; photographed at shelf height.
+SHQ-056,Serving tray — pins 056,1992,Pins,Excellent,A1,2018-09-03,Estate sale,147.89,No,
+SHQ-057,Money box — tinware 057,1999,Tinware,Good,B2,2019-10-04,Market stall,156.39,Yes,
+SHQ-058,Bookend pair — ceramics 058,2006,Ceramics,Fair,C3,2020-11-05,Donation,175.68,No,
+SHQ-059,Wrapping paper roll — prints 059,2013,Prints,Poor,D4,2021-12-06,Trade,189.65,No,
+SHQ-060,Enamel pin — plush 060,1960,Plush,Excellent,E1,2022-01-07,Estate sale,200.73,Yes,Catalogued from the July audit; photographed at shelf height.
+SHQ-061,Tin lunchbox — paper 061,1967,Paper,Good,F2,2023-02-08,Market stall,216.75,No,
+SHQ-062,Ceramic mug — media 062,1974,Media,Fair,G3,2024-03-09,Donation,224.14,No,
+SHQ-063,Comic strip print — homeware 063,1981,Homeware,Poor,H4,2025-04-10,Trade,240.95,Yes,
+SHQ-064,Plush figure — pins 064,1988,Pins,Excellent,A1,2010-05-11,Estate sale,252.94,No,
+SHQ-065,Desk calendar — tinware 065,1995,Tinware,Good,B2,2011-06-12,Market stall,265.8,No,Catalogued from the July audit; photographed at shelf height.
+SHQ-066,Vinyl record — ceramics 066,2002,Ceramics,Fair,C3,2012-07-13,Donation,277.56,Yes,
+SHQ-067,Postcard set — prints 067,2009,Prints,Poor,D4,2013-08-14,Trade,294.4,No,
+SHQ-068,Wall clock — plush 068,2016,Plush,Excellent,E1,2014-09-15,Estate sale,308.45,No,
+SHQ-069,Snow globe — paper 069,1963,Paper,Good,F2,2015-10-16,Market stall,316.74,Yes,
+SHQ-070,Badge set — media 070,1970,Media,Fair,G3,2016-11-17,Donation,31.64,No,Catalogued from the July audit; photographed at shelf height.
+SHQ-071,Serving tray — homeware 071,1977,Homeware,Poor,H4,2017-12-18,Trade,38.61,No,
+SHQ-072,Money box — pins 072,1984,Pins,Excellent,A1,2018-01-19,Estate sale,58.01,Yes,
+SHQ-073,Bookend pair — tinware 073,1991,Tinware,Good,B2,2019-02-20,Market stall,70.47,No,
+SHQ-074,Wrapping paper roll — ceramics 074,1998,Ceramics,Fair,C3,2020-03-21,Donation,86.93,No,
+SHQ-075,Enamel pin — prints 075,2005,Prints,Poor,D4,2021-04-22,Trade,98.22,Yes,Catalogued from the July audit; photographed at shelf height.
+SHQ-076,Tin lunchbox — plush 076,2012,Plush,Excellent,E1,2022-05-23,Estate sale,105.85,No,
+SHQ-077,Ceramic mug — paper 077,2019,Paper,Good,F2,2023-06-24,Market stall,119.86,No,
+SHQ-078,Comic strip print — media 078,1966,Media,Fair,G3,2024-07-25,Donation,135.69,Yes,
+SHQ-079,Plush figure — homeware 079,1973,Homeware,Poor,H4,2025-08-26,Trade,142.23,No,
+SHQ-080,Desk calendar — pins 080,1980,Pins,Excellent,A1,2010-09-27,Estate sale,159.62,No,Catalogued from the July audit; photographed at shelf height.
+SHQ-081,Vinyl record — tinware 081,1987,Tinware,Good,B2,2011-10-01,Market stall,169.68,Yes,
+SHQ-082,Postcard set — ceramics 082,1994,Ceramics,Fair,C3,2012-11-02,Donation,182.17,No,
+SHQ-083,Wall clock — prints 083,2001,Prints,Poor,D4,2013-12-03,Trade,194.59,No,
+SHQ-084,Snow globe — plush 084,2008,Plush,Excellent,E1,2014-01-04,Estate sale,214.68,Yes,
+SHQ-085,Badge set — paper 085,2015,Paper,Good,F2,2015-02-05,Market stall,221.29,No,Catalogued from the July audit; photographed at shelf height.
+SHQ-086,Serving tray — media 086,1962,Media,Fair,G3,2016-03-06,Donation,235.48,No,
+SHQ-087,Money box — homeware 087,1969,Homeware,Poor,H4,2017-04-07,Trade,249.91,Yes,
+SHQ-088,Bookend pair — pins 088,1976,Pins,Excellent,A1,2018-05-08,Estate sale,267.71,No,
+SHQ-089,Wrapping paper roll — tinware 089,1983,Tinware,Good,B2,2019-06-09,Market stall,272.81,No,
+SHQ-090,Enamel pin — ceramics 090,1990,Ceramics,Fair,C3,2020-07-10,Donation,289.49,Yes,Catalogued from the July audit; photographed at shelf height.
+SHQ-091,Tin lunchbox — prints 091,1997,Prints,Poor,D4,2021-08-11,Trade,303.49,No,
+SHQ-092,Ceramic mug — plush 092,2004,Plush,Excellent,E1,2022-09-12,Estate sale,319.83,No,
+SHQ-093,Comic strip print — paper 093,2011,Paper,Good,F2,2023-10-13,Market stall,32.19,Yes,
+SHQ-094,Plush figure — media 094,2018,Media,Fair,G3,2024-11-14,Donation,45.64,No,
+SHQ-095,Desk calendar — homeware 095,1965,Homeware,Poor,H4,2025-12-15,Trade,52.78,No,Catalogued from the July audit; photographed at shelf height.
+SHQ-096,Vinyl record — pins 096,1972,Pins,Excellent,A1,2010-01-16,Estate sale,67.15,Yes,
+SHQ-097,Postcard set — tinware 097,1979,Tinware,Good,B2,2011-02-17,Market stall,79.59,No,
+SHQ-098,Wall clock — ceramics 098,1986,Ceramics,Fair,C3,2012-03-18,Donation,97.84,No,
+SHQ-099,Snow globe — prints 099,1993,Prints,Poor,D4,2013-04-19,Trade,111.58,Yes,
+SHQ-100,Badge set — plush 100,2000,Plush,Excellent,E1,2014-05-20,Estate sale,116.51,No,Catalogued from the July audit; photographed at shelf height.
+SHQ-101,Serving tray — paper 101,2007,Paper,Good,F2,2015-06-21,Market stall,129.76,No,
+SHQ-102,Money box — media 102,2014,Media,Fair,G3,2016-07-22,Donation,143.32,Yes,
+SHQ-103,Bookend pair — homeware 103,1961,Homeware,Poor,H4,2017-08-23,Trade,156.33,No,
+SHQ-104,Wrapping paper roll — pins 104,1968,Pins,Excellent,A1,2018-09-24,Estate sale,171.85,No,
+SHQ-105,Enamel pin — tinware 105,1975,Tinware,Good,B2,2019-10-25,Market stall,185.89,Yes,Catalogued from the July audit; photographed at shelf height.
+SHQ-106,Tin lunchbox — ceramics 106,1982,Ceramics,Fair,C3,2020-11-26,Donation,195.63,No,
+SHQ-107,Ceramic mug — prints 107,1989,Prints,Poor,D4,2021-12-27,Trade,206.04,No,
+SHQ-108,Comic strip print — plush 108,1996,Plush,Excellent,E1,2022-01-01,Estate sale,223.19,Yes,
+SHQ-109,Plush figure — paper 109,2003,Paper,Good,F2,2023-02-02,Market stall,235.69,No,
+SHQ-110,Desk calendar — media 110,2010,Media,Fair,G3,2024-03-03,Donation,250.66,No,Catalogued from the July audit; photographed at shelf height.
+SHQ-111,Vinyl record — homeware 111,2017,Homeware,Poor,H4,2025-04-04,Trade,267.53,Yes,
+SHQ-112,Postcard set — pins 112,1964,Pins,Excellent,A1,2010-05-05,Estate sale,277.9,No,
+SHQ-113,Wall clock — tinware 113,1971,Tinware,Good,B2,2011-06-06,Market stall,289.15,No,
+SHQ-114,Snow globe — ceramics 114,1978,Ceramics,Fair,C3,2012-07-07,Donation,303.18,Yes,
+SHQ-115,Badge set — prints 115,1985,Prints,Poor,D4,2013-08-08,Trade,316.76,No,Catalogued from the July audit; photographed at shelf height.
+SHQ-116,Serving tray — plush 116,1992,Plush,Excellent,E1,2014-09-09,Estate sale,23.54,No,
+SHQ-117,Money box — paper 117,1999,Paper,Good,F2,2015-10-10,Market stall,45.0,Yes,
+SHQ-118,Bookend pair — media 118,2006,Media,Fair,G3,2016-11-11,Donation,56.8,No,
+SHQ-119,Wrapping paper roll — homeware 119,2013,Homeware,Poor,H4,2017-12-12,Trade,70.75,No,
+SHQ-120,Enamel pin — pins 120,1960,Pins,Excellent,A1,2018-01-13,Estate sale,82.98,Yes,Catalogued from the July audit; photographed at shelf height.
+
+CATEGORY TOTALS
+Category,Items,Value (AUD)
+Pins,15,1800
+Tinware,15,1800
+Ceramics,15,1800
+Prints,15,1800
+Plush,15,1800
+Paper,15,1800
+Media,15,1800
+Homeware,15,1800

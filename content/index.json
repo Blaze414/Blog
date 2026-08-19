@@ -10,7 +10,8 @@
     "a-short-history-of-the-doghouse",
     "art_036d0a4179dd79db7d9dff25",
     "art_6a7f8884be7617fc9a7f9053",
-    "art_f1ba60f19b9fc8be5fab50d9"
+    "art_f1ba60f19b9fc8be5fab50d9",
+    "art_440322ad0f2df50f928092f2"
   ],
   "slugs": [
     "tokyo-skytree-and-shibuya",
@@ -22,7 +23,8 @@
     "a-short-history-of-the-doghouse",
     "devils-river-murder-1863",
     "melbourne-eight-hour-day-three-steps",
-    "wagga-wagga-chiko-roll-debut"
+    "wagga-wagga-chiko-roll-debut",
+    "reading-a-document-without-downloading-it"
   ],
   "assetIds": [
     "taiwanese-festival",
@@ -35,7 +37,11 @@
     "asset_76f7fd2cd692707b2f05200a"
   ],
   "documentIds": [
-    "tokyo-day-timeline"
+    "tokyo-day-timeline",
+    "doc_cbac1f41272e58d1e4d418e4",
+    "doc_116339d5771432241732b901",
+    "doc_d30cf89ccb482b03964ad6a9",
+    "doc_2055387d889239d0890c5024"
   ],
   "imports": {
     "markdown-devils-river-murder-1863-v1": {
@@ -82,6 +88,36 @@
       "assetMetadataFiles": [],
       "publicAssetFiles": [],
       "importedAt": "2026-07-23T04:13:59.200Z"
+    },
+    "document-preview-showcase-v1": {
+      "digest": "23a6b2d29488790ddbf6dfa95323eb4fa7ea4b29d7526ba2b1db53ca9f307477",
+      "sourceDigest": "a813144eca8b29560bc16551f68607c09489c014d8807f33c41e6003fdc5d7cb",
+      "sourceFormat": "json",
+      "adapterVersion": 1,
+      "articleId": "art_440322ad0f2df50f928092f2",
+      "assetIds": [],
+      "documentIds": [
+        "doc_cbac1f41272e58d1e4d418e4",
+        "doc_116339d5771432241732b901",
+        "doc_d30cf89ccb482b03964ad6a9",
+        "doc_2055387d889239d0890c5024"
+      ],
+      "articleFile": "content/articles/art_440322ad0f2df50f928092f2.json",
+      "assetMetadataFiles": [],
+      "publicAssetFiles": [],
+      "documentMetadataFiles": [
+        "content/documents/art_440322ad0f2df50f928092f2/doc_cbac1f41272e58d1e4d418e4.json",
+        "content/documents/art_440322ad0f2df50f928092f2/doc_116339d5771432241732b901.json",
+        "content/documents/art_440322ad0f2df50f928092f2/doc_d30cf89ccb482b03964ad6a9.json",
+        "content/documents/art_440322ad0f2df50f928092f2/doc_2055387d889239d0890c5024.json"
+      ],
+      "publicDocumentFiles": [
+        "public/documents/articles/art_440322ad0f2df50f928092f2/doc_cbac1f41272e58d1e4d418e4.csv",
+        "public/documents/articles/art_440322ad0f2df50f928092f2/doc_116339d5771432241732b901.pptx",
+        "public/documents/articles/art_440322ad0f2df50f928092f2/doc_d30cf89ccb482b03964ad6a9.docx",
+        "public/documents/articles/art_440322ad0f2df50f928092f2/doc_2055387d889239d0890c5024.pdf"
+      ],
+      "importedAt": "2026-08-19T08:35:56.783Z"
     }
   },
   "articles": [
@@ -379,6 +415,150 @@
         }
       ],
       "related": []
+    },
+    {
+      "id": "art_440322ad0f2df50f928092f2",
+      "slug": "reading-a-document-without-downloading-it",
+      "category": "Studio notes",
+      "title": "Reading a document without downloading it",
+      "summary": "Spreadsheets, slide decks, reports and PDFs open inside the article. Here is what each one looks like, and why nothing ever leaves your browser.",
+      "date": "19 August 2026",
+      "author": "Snoopy HQ Engineering",
+      "tags": [
+        "Studio notes",
+        "Document preview",
+        "Accessibility"
+      ],
+      "accent": "sky",
+      "art": "type",
+      "artLabel": "OPEN\nIN PLACE",
+      "kicker": "Four attachments, four formats, no downloads required.",
+      "sections": [
+        {
+          "id": "why-previews",
+          "title": "Why previews instead of downloads",
+          "paragraphs": [
+            "A link to a spreadsheet asks a reader to leave the page, wait for a download, find the file and open an application that may not be installed. Most people simply do not bother, and the evidence behind a story goes unread.",
+            "Every attachment on this site opens where it sits. The file is parsed by your own browser, so nothing is uploaded to a service and nothing is sent anywhere. The original remains one click away for anyone who wants it, but reading it is no longer conditional on downloading it.",
+            "The four documents below exist to demonstrate each supported format. Their contents are invented for the purpose."
+          ]
+        },
+        {
+          "id": "a-spreadsheet",
+          "title": "A spreadsheet",
+          "paragraphs": [
+            "Tabular data is the format that suffers most from being hidden behind a download. This inventory has eleven columns and a hundred and twenty rows, which is enough to show column resizing and scrolling behaviour without becoming a chore to read."
+          ],
+          "documents": [
+            {
+              "id": "doc_cbac1f41272e58d1e4d418e4",
+              "articleId": "art_440322ad0f2df50f928092f2",
+              "articleSlug": "reading-a-document-without-downloading-it",
+              "title": "Collection inventory",
+              "filename": "collection-inventory.csv",
+              "src": "/documents/articles/art_440322ad0f2df50f928092f2/doc_cbac1f41272e58d1e4d418e4.csv",
+              "extension": "csv",
+              "mimeType": "text/csv; charset=utf-8",
+              "size": 12738,
+              "caption": "Eleven columns and 120 rows of demonstration data, for testing wide tables and scrolling.",
+              "afterParagraph": 0
+            }
+          ]
+        },
+        {
+          "id": "a-slide-deck",
+          "title": "A slide deck",
+          "paragraphs": [
+            "Presentations carry their own theme, fonts and layout rules. The viewer renders them inside an isolated document tree, so a deck's styling can never leak out and restyle the article around it."
+          ],
+          "documents": [
+            {
+              "id": "doc_116339d5771432241732b901",
+              "articleId": "art_440322ad0f2df50f928092f2",
+              "articleSlug": "reading-a-document-without-downloading-it",
+              "title": "Collecting season 2026",
+              "filename": "collecting-season-2026.pptx",
+              "src": "/documents/articles/art_440322ad0f2df50f928092f2/doc_116339d5771432241732b901.pptx",
+              "extension": "pptx",
+              "mimeType": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+              "size": 34237,
+              "caption": "A six-slide demonstration deck: title, bullets, a table, a pull quote and a two-column layout.",
+              "afterParagraph": 0
+            }
+          ]
+        },
+        {
+          "id": "a-written-report",
+          "title": "A written report",
+          "paragraphs": [
+            "Word documents keep their heading hierarchy, lists, tables and page breaks. This one runs to two pages so the flow across a page boundary is visible."
+          ],
+          "documents": [
+            {
+              "id": "doc_d30cf89ccb482b03964ad6a9",
+              "articleId": "art_440322ad0f2df50f928092f2",
+              "articleSlug": "reading-a-document-without-downloading-it",
+              "title": "Field notes: shelf photography",
+              "filename": "shelf-photography-field-notes.docx",
+              "src": "/documents/articles/art_440322ad0f2df50f928092f2/doc_d30cf89ccb482b03964ad6a9.docx",
+              "extension": "docx",
+              "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+              "size": 37901,
+              "caption": "A two-page demonstration report with headings, lists, two tables and an explicit page break.",
+              "afterParagraph": 0
+            }
+          ]
+        },
+        {
+          "id": "a-pdf",
+          "title": "A PDF",
+          "paragraphs": [
+            "PDFs get a page navigator, zoom and fit controls. The renderer streams the file with range requests rather than downloading it whole, which is what keeps a long document responsive from the first page."
+          ],
+          "documents": [
+            {
+              "id": "doc_2055387d889239d0890c5024",
+              "articleId": "art_440322ad0f2df50f928092f2",
+              "articleSlug": "reading-a-document-without-downloading-it",
+              "title": "Care and handling notes",
+              "filename": "care-and-handling-notes.pdf",
+              "src": "/documents/articles/art_440322ad0f2df50f928092f2/doc_2055387d889239d0890c5024.pdf",
+              "extension": "pdf",
+              "mimeType": "application/pdf",
+              "size": 128757,
+              "caption": "A four-page demonstration PDF with tables and a pull quote, for page navigation and zoom.",
+              "afterParagraph": 0
+            }
+          ]
+        },
+        {
+          "id": "how-it-loads",
+          "title": "How it loads",
+          "paragraphs": [
+            "None of the machinery above reaches you until you ask for it. The page itself ships only the attachment cards. Moving a cursor towards one quietly begins fetching the viewer, and the document itself is only read once the preview is opened.",
+            "A reader who never opens an attachment downloads none of it."
+          ],
+          "list": [
+            {
+              "label": "On page load",
+              "text": "the card only, rendered on the server."
+            },
+            {
+              "label": "On hover, focus or touch",
+              "text": "the viewer begins downloading in the background."
+            },
+            {
+              "label": "On opening a preview",
+              "text": "the file is fetched and parsed in your browser."
+            }
+          ],
+          "listStyle": "ordered"
+        }
+      ],
+      "related": [
+        "tokyo-skytree-and-shibuya",
+        "notes-from-the-doghouse"
+      ]
     }
   ],
   "assets": [
@@ -405,5 +585,54 @@
       "caption": "The Old Melbourne Gaol precinct from the air in 1922, photographed by Sir Raymond Garrett. State Library Victoria; public domain."
     }
   ],
-  "documents": []
+  "documents": [
+    {
+      "id": "doc_cbac1f41272e58d1e4d418e4",
+      "articleId": "art_440322ad0f2df50f928092f2",
+      "articleSlug": "reading-a-document-without-downloading-it",
+      "title": "Collection inventory",
+      "filename": "collection-inventory.csv",
+      "src": "/documents/articles/art_440322ad0f2df50f928092f2/doc_cbac1f41272e58d1e4d418e4.csv",
+      "extension": "csv",
+      "mimeType": "text/csv; charset=utf-8",
+      "size": 12738,
+      "caption": "Eleven columns and 120 rows of demonstration data, for testing wide tables and scrolling."
+    },
+    {
+      "id": "doc_116339d5771432241732b901",
+      "articleId": "art_440322ad0f2df50f928092f2",
+      "articleSlug": "reading-a-document-without-downloading-it",
+      "title": "Collecting season 2026",
+      "filename": "collecting-season-2026.pptx",
+      "src": "/documents/articles/art_440322ad0f2df50f928092f2/doc_116339d5771432241732b901.pptx",
+      "extension": "pptx",
+      "mimeType": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": 34237,
+      "caption": "A six-slide demonstration deck: title, bullets, a table, a pull quote and a two-column layout."
+    },
+    {
+      "id": "doc_d30cf89ccb482b03964ad6a9",
+      "articleId": "art_440322ad0f2df50f928092f2",
+      "articleSlug": "reading-a-document-without-downloading-it",
+      "title": "Field notes: shelf photography",
+      "filename": "shelf-photography-field-notes.docx",
+      "src": "/documents/articles/art_440322ad0f2df50f928092f2/doc_d30cf89ccb482b03964ad6a9.docx",
+      "extension": "docx",
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "size": 37901,
+      "caption": "A two-page demonstration report with headings, lists, two tables and an explicit page break."
+    },
+    {
+      "id": "doc_2055387d889239d0890c5024",
+      "articleId": "art_440322ad0f2df50f928092f2",
+      "articleSlug": "reading-a-document-without-downloading-it",
+      "title": "Care and handling notes",
+      "filename": "care-and-handling-notes.pdf",
+      "src": "/documents/articles/art_440322ad0f2df50f928092f2/doc_2055387d889239d0890c5024.pdf",
+      "extension": "pdf",
+      "mimeType": "application/pdf",
+      "size": 128757,
+      "caption": "A four-page demonstration PDF with tables and a pull quote, for page navigation and zoom."
+    }
+  ]
 }
