@@ -4,13 +4,34 @@ type NewsletterSignupProps = {
   variant?: "home" | "article";
 };
 
+/** Geometry-only postage stamp; the postmark lands when the form succeeds. */
+function PostageStamp() {
+  return (
+    <div className="newsletter-stamp" aria-hidden="true">
+      <div className="stamp-paper">
+        <span className="stamp-value">1st</span>
+        <div className="stamp-scene">
+          <i className="stamp-sun" />
+          <i className="stamp-house" />
+          <i className="stamp-horizon" />
+        </div>
+        <span className="stamp-name">Snoopy HQ</span>
+      </div>
+      <div className="stamp-postmark">
+        <span>SNOOPY HQ</span>
+        <small>JOURNAL</small>
+        <i />
+      </div>
+    </div>
+  );
+}
+
 export function NewsletterSignup({ variant = "home" }: NewsletterSignupProps) {
   if (variant === "article") {
     return (
       <section className="article-newsletter" id="newsletter">
-        <span className="eyebrow">Stay in the loop</span>
-        <h2>A small note from Snoopy HQ</h2>
-        <p>Occasional stories and ideas, delivered without crowding your inbox.</p>
+        <h2>Letters from the doghouse</h2>
+        <p>New stories, gift ideas and collector notes. A few times a season, and never more.</p>
         <NewsletterForm />
       </section>
     );
@@ -18,12 +39,16 @@ export function NewsletterSignup({ variant = "home" }: NewsletterSignupProps) {
 
   return (
     <section className="newsletter" id="newsletter">
-      <div className="newsletter-art" aria-hidden="true"><span>POST</span><i /></div>
-      <div>
-        <span className="eyebrow">A note now and then</span>
-        <h2>Fresh from the doghouse</h2>
-        <p>New stories, gift ideas and collector notes. Sent occasionally and kept pleasantly concise.</p>
+      <PostageStamp />
+      <div className="newsletter-copy">
+        <h2>Letters from the doghouse</h2>
+        <p>New stories, gift ideas and collector notes, posted a few times a season. Long enough between issues that each one is worth opening.</p>
         <NewsletterForm />
+        <ul className="newsletter-assurances">
+          <li>A few times a season</li>
+          <li>No trackers on this site</li>
+          <li>Nothing sent to third parties</li>
+        </ul>
       </div>
     </section>
   );
